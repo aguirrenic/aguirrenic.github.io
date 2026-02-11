@@ -99,8 +99,9 @@ h2 {
 /* ---------- BUTTON ---------- */
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;      /* antes estaba inline-block */
+  margin-top: 25px;    /* espacio respecto a la imagen */
+  width: fit-content;  /* para que no ocupe todo el ancho */
   margin-bottom: 40px; 
   padding: 10px 18px;
   background: #38bdf8;
@@ -110,6 +111,7 @@ h2 {
   font-weight: 600;
   transition: 0.3s;
 }
+
 
 .btn:hover {
   background: #0ea5e9;
