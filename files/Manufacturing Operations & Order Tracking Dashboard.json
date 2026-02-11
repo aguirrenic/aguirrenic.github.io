@@ -1,0 +1,6163 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Tablero de Abastecimiento Logístico-tv2-malvinas",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 116,
+  "links": [],
+  "panels": [
+    {
+      "description": " ",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 151,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;\">\n    <img src=\"https://mirgortalks.com.ar/publicrepo/mirgoria.png\" alt=\"DMirgor\" style=\"width: 100%; height: 100%; object-fit: cover; margin-bottom: 10px;\">\n</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": " ",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 15,
+        "x": 4,
+        "y": 0
+      },
+      "id": 152,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "Fecha inválida": {
+                  "color": "super-light-yellow",
+                  "index": 1,
+                  "text": "-"
+                },
+                "Invalid date": {
+                  "color": "super-light-yellow",
+                  "index": 0,
+                  "text": "-"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "noValue": "-",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-yellow",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 19,
+        "y": 0
+      },
+      "id": 108,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 20,
+          "valueSize": 20
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "calidad": true,
+              "cod_lprod_19m": true,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "desc_art": true,
+              "disponibilidad": true,
+              "fila": true,
+              "hora": false,
+              "objetivo": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": true,
+              "productividad": true,
+              "rechazados": true,
+              "rn_orden": true,
+              "sku": true,
+              "sum_takt_time": true,
+              "total_producidos": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "fecha": "Fecha",
+              "fecha_act": "Fecha",
+              "hora": "Actualización",
+              "hora_act": "Actualización"
+            }
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "isNotNull",
+                  "options": {}
+                },
+                "fieldName": "Fecha"
+              },
+              {
+                "config": {
+                  "id": "isNotNull",
+                  "options": {}
+                },
+                "fieldName": "Actualización"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "formatTime",
+          "options": {
+            "outputFormat": "DD-MM-YYYY",
+            "timeField": "Fecha",
+            "timezone": "utc",
+            "useTimezone": true
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "Actualización": {
+                "aggregations": [
+                  "max"
+                ],
+                "operation": "aggregate"
+              },
+              "Fecha": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        },
+        {
+          "id": "formatTime",
+          "options": {
+            "outputFormat": "HH:mm:ss",
+            "timeField": "Actualización (max)",
+            "timezone": "utc",
+            "useTimezone": true
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Actualización (max)": "Actualización"
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 10,
+        "x": 3,
+        "y": 1
+      },
+      "id": 89,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 10px;\">\n  <h3 style=\"font-size: 30px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TABLERO DE ABASTECIMIENTO LOGISTICO</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 14,
+        "y": 1
+      },
+      "id": 169,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 10px;\">\n  <h3 style=\"font-size: 22px; font-weight: bold; margin: 0;\">UNIDAD ORGANIZATIVA</h3>\n</div>\n<div style=\"height: 35px; display: flex; justify-content: center; align-items: center; margin-top: 10px;\">\n  <h3 style=\"font-size: 20px; font-weight: bold; margin: 0;\">TM-SMG</h3>\n</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-redshift-datasource",
+        "uid": "ae2jqjwkg2mtcd"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 144,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 20
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-redshift-datasource",
+            "uid": "ae2jqjwkg2mtcd"
+          },
+          "rawSQL": "SELECT \r\n'Línea' AS Línea, \t\r\n'Fabricante' AS Fabricante,\t\r\n'Color'\tAS Color,\r\n'Modelo' AS Modelo,\r\n'Orden'\tAS Orden,\r\n'Estado' AS Estado,\r\n'Cantidad inicio' AS Cantidad_inicio,\t\r\n'Ingreso a línea'\tAS Ingreso_a_línea,\r\n'Saldo a ingresar' AS Saldo_a_ingresar,\r\n'Producidos'\tAS Producidos,\r\n'Saldo a producir' AS Saldo_a_producir",
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "disabled": true,
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "sum_takt_time": true,
+              "takt_time_seg": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "descripcion": 1,
+              "objetivo": 2,
+              "piezas_no_ok": 5,
+              "piezas_ok": 4,
+              "producidos_actuales": 3,
+              "producto": 0
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "PIEZAS OK",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 2,
+        "x": 0,
+        "y": 6
+      },
+      "id": 147,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 100px;\">\n  <h3 style=\"font-size: 40px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TM06</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-redshift-datasource",
+        "uid": "ae2jqjwkg2mtcd"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden cerrada o suspendida para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 6
+      },
+      "id": 148,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-redshift-datasource",
+            "uid": "ae2jqjwkg2mtcd"
+          },
+          "fillMode": {
+            "mode": 0
+          },
+          "format": 1,
+          "rawSQL": "SELECT \r\n    linea, \r\n    fabricante AS fabricante, \r\n    color, \r\n    modelo, \r\n    orden, \r\n    cant_inicio, \r\n    ingreso_a_linea, \r\n    saldo_a_ingresar, \r\n    producidos, \r\n    saldo_a_prod, \r\n    estado,\r\n    timestamp_act AS fecha,\r\n    timestamp_act AS hora\r\nFROM \"industrial\".\"sim_abastecimiento_logistico_tdf\"\r\nWHERE linea IN ('TM06','TM07','TM08','TM09','TM10');",
+          "refId": "A",
+          "schema": "industrial",
+          "table": "sim_abastecimiento_logistico_tdf"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM06"
+                  }
+                },
+                "fieldName": "linea"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "SUSPENDIDA"
+                  }
+                },
+                "fieldName": "estado"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "CERRADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden activada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 8
+      },
+      "id": 149,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM06"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "ACTIVADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden lanzada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 10
+      },
+      "id": 150,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM06"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "LANZADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 170,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 2,
+        "x": 0,
+        "y": 13
+      },
+      "id": 156,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 100px;\">\n  <h3 style=\"font-size: 40px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TM07</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden cerrada o suspendida para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 13
+      },
+      "id": 153,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM07"
+                  }
+                },
+                "fieldName": "linea"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "SUSPENDIDA"
+                  }
+                },
+                "fieldName": "estado"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "CERRADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden activada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 15
+      },
+      "id": 154,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM07"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "ACTIVADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden lanzada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 17
+      },
+      "id": 155,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM07"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "LANZADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 19
+      },
+      "id": 171,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 2,
+        "x": 0,
+        "y": 20
+      },
+      "id": 157,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 100px;\">\n  <h3 style=\"font-size: 40px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TM08</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden cerrada o suspendida para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 20
+      },
+      "id": 158,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM08"
+                  }
+                },
+                "fieldName": "linea"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "SUSPENDIDA"
+                  }
+                },
+                "fieldName": "estado"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "CERRADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden activada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 22
+      },
+      "id": 159,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM08"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "ACTIVADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden lanzada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "noValue": "No existe orden lanzada para la línea.",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 24
+      },
+      "id": 160,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM08"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "LANZADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      },
+      "id": 90,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 2,
+        "x": 0,
+        "y": 27
+      },
+      "id": 161,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 100px;\">\n  <h3 style=\"font-size: 40px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TM09</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden cerrada o suspendida para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 27
+      },
+      "id": 163,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM09"
+                  }
+                },
+                "fieldName": "linea"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "SUSPENDIDA"
+                  }
+                },
+                "fieldName": "estado"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "CERRADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden activada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 29
+      },
+      "id": 167,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM09"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "ACTIVADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden lanzada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 31
+      },
+      "id": 165,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM09"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "LANZADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 172,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 2,
+        "x": 0,
+        "y": 34
+      },
+      "id": 162,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"height: 25px; display: flex; justify-content: center; align-items: center; margin-top: 100px;\">\n  <h3 style=\"font-size: 40px; font-weight: bold; margin: 0; color: rgb(61, 146, 244);\">TM10</h3>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "12.2.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden cerrada o suspendida para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#373737",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#464646",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 34
+      },
+      "id": 166,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM10"
+                  }
+                },
+                "fieldName": "linea"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "SUSPENDIDA"
+                  }
+                },
+                "fieldName": "estado"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "CERRADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden activada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#176916",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#157214",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 36
+      },
+      "id": 164,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM10"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "ACTIVADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "transparent",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [
+            {
+              "options": {
+                "match": "null+nan",
+                "result": {
+                  "index": 0,
+                  "text": "No existe orden lanzada para la línea."
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "fabricante"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "color"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "modelo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "orden"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "estado"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "cant_inicio"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ingreso_a_linea"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_ingresar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "producidos"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#14145d",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "saldo_a_prod"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0a0a7f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 22,
+        "x": 2,
+        "y": 38
+      },
+      "id": 168,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "text": {
+          "valueSize": 17
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 148,
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Calidad": true,
+              "Disponibilidad": true,
+              "PNP": true,
+              "Producidos": true,
+              "Productividad": true,
+              "Rechazados": true,
+              "articulo": true,
+              "calidad": true,
+              "cant_takt_time": true,
+              "cod_lprod_19m": false,
+              "cod_planta_pp18": true,
+              "cod_uorg_pp10": true,
+              "disponibilidad": true,
+              "fecha": true,
+              "hora": true,
+              "linea": false,
+              "oee": true,
+              "origen": true,
+              "pnp": true,
+              "producidos": false,
+              "productividad": true,
+              "rechazados": false,
+              "rn_orden": true,
+              "sum_takt_time": true,
+              "takt_time_seg": true,
+              "unidad_organizativa": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "cant_inicio": 6,
+              "color": 2,
+              "estado": 5,
+              "fabricante": 1,
+              "ingreso_a_linea": 7,
+              "linea": 0,
+              "modelo": 3,
+              "orden": 4,
+              "producidos": 9,
+              "saldo_a_ingresar": 8,
+              "saldo_a_prod": 10
+            },
+            "renameByName": {
+              "cod_lprod_19m": "",
+              "desc_art": "DESCRIPCION",
+              "objetivo": "OBJETIVO",
+              "oee": "OEE",
+              "pnp": "",
+              "producidos": "",
+              "rechazados": "PIEZAS NO OK",
+              "sku": "PRODUCTO",
+              "total_producidos": "PRODUCIDOS ACTUALES"
+            }
+          },
+          "text": {
+            "titleSize": 70,
+            "valueSize": 70
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "TM10"
+                  }
+                },
+                "fieldName": "linea"
+              },
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "LANZADA"
+                  }
+                },
+                "fieldName": "estado"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "DESCRIPCION": false,
+              "OBJETIVO": false,
+              "PIEZAS NO OK": false,
+              "PIEZAS OK": false,
+              "PRODUCIDOS ACTUALES": false,
+              "cod_lprod_19m": true,
+              "fila": false,
+              "linea": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "PRODUCTO": " "
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 40
+      },
+      "id": 53,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    }
+  ],
+  "preload": true,
+  "schemaVersion": 42,
+  "tags": [
+    "TM-SMG",
+    "TM06",
+    "TM07",
+    "TM08",
+    "TM09",
+    "TM10"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": [
+            "EAPINY01"
+          ],
+          "value": [
+            "EAPINY01"
+          ]
+        },
+        "datasource": {
+          "type": "grafana-athena-datasource",
+          "uid": "de2jnxc4zjk74f"
+        },
+        "definition": "",
+        "description": "",
+        "hide": 2,
+        "includeAll": false,
+        "label": "LINEA",
+        "multi": true,
+        "name": "LINEA",
+        "options": [],
+        "query": {
+          "column": "cod_lprod_19m",
+          "connectionArgs": {
+            "catalog": "__default",
+            "database": "__default",
+            "region": "__default",
+            "resultReuseEnabled": false,
+            "resultReuseMaxAgeInMinutes": 60
+          },
+          "format": 1,
+          "rawSQL": "SELECT \r\n    cod_lprod_19m\r\nFROM oee_dashboard.oee_v_indicadores_calc\r\nWHERE origen = 'CNT'\r\nAND cod_planta_pp18 = 'ONTEC'\r\nAND cod_uorg_pp10 = 'UNAONTEC'\r\nAND cod_lprod_19m in ('EAPINY01','EAPINY02','EAPINY03','EAPPIN01');",
+          "table": "oee_v_indicadores_calc"
+        },
+        "refresh": 2,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "1m",
+      "2m",
+      "3m"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Tablero de Abastecimiento Logístico-tv2-malvinas",
+  "uid": "327be178-4bd0-4218-ae76-23771e7df4fc",
+  "version": 53
+}
