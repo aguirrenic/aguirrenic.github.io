@@ -85,3 +85,18 @@ footer {
   color: #64748b;
   font-size: 14px;
 }
+
+h3 {
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+p {
+  margin-bottom: 18px;
+  color: #cbd5e1;
+}
