@@ -92,7 +92,7 @@ h2 {
   display: block;
   margin: 25px auto 30px auto; /* centrada */
   max-width: 900px;           /* límite real */
-  width: 100%;                /* responsive */
+  width: 500px;                /* responsive */
   height: auto;
   border-radius: 10px;
 }
