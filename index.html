@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nicolás Aguirre | Data & AI Engineer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-      margin: 0;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 10px;
-    }
-    .project {
-      margin-bottom: 20px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+  <title>Nicolás Aguirre | Data & AI Architect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <h1>Nicolás A</h1>
-  <p>Data Architect | SAP BW/4HANA | SQL | Computer Vision</p>
+<header>
+  <h1>Nicolás Aguirre</h1>
+  <p>Data & AI Architect | SAP BW/4HANA | Industrial Analytics | Computer Vision</p>
+</header>
 
+<section>
   <h2>About Me</h2>
-  <p>
-    Data & AI professional with experience in industrial analytics,
-    OEE systems and real-time computer vision platforms.
-  </p>
-
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Rapax – Computer Vision Platform</h3>
-    <p>Real-time video streaming system with YOLO detection using Flask and React.</p>
+  <div class="card">
+    <p>
+      I design and build industrial data platforms and real-time AI systems.
+      Focused on scalable data architecture, OEE analytics and computer vision.
+    </p>
   </div>
+</section>
 
-  <div class="project">
+<section>
+  <h2>Computer Vision – Rapax</h2>
+  <div class="card">
+    <h3>Real-Time Vision Platform</h3>
+    <p>Multi-camera streaming system built with Flask, WebRTC and YOLO.</p>
+
+    <iframe width="100%" height="400"
+      src="https://www.youtube.com/embed/TU_VIDEO_ID"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Industrial Analytics</h2>
+
+  <div class="card">
     <h3>OEE Analytics Platform</h3>
-    <p>Industrial metrics system using SQL, Redshift and BI tools.</p>
+    <p>Industrial monitoring system using SQL, Redshift and Grafana.</p>
+    <a class="btn" href="files/grafana-dashboard.json" target="_blank">
+      View Grafana JSON
+    </a>
   </div>
 
-  <h2>Contact</h2>
-  <p>
-    LinkedIn: <a href="#">Tu LinkedIn</a><br>
-    GitHub: <a href="#">Tu GitHub</a>
-  </p>
+  <div class="card">
+    <h3>Power BI Executive Dashboard</h3>
+    <p>Executive KPI dashboard for industrial performance analysis.</p>
+    <a class="btn" href="files/dashboard.pbix" download>
+      Download Power BI File
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Nicolás Aguirre
+</footer>
 
 </body>
 </html>
