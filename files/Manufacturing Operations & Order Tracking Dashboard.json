@@ -47,7 +47,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;\">\n    <img src=\"https://mirgortalks.com.ar/publicrepo/mirgoria.png\" alt=\"DMirgor\" style=\"width: 100%; height: 100%; object-fit: cover; margin-bottom: 10px;\">\n</div>\n",
+        "content": "<div style=\"width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;\">\n    <img src=\"https://aguirrenic.github.io/" alt=\"aguirrenic" style=\"width: 100%; height: 100%; object-fit: cover; margin-bottom: 10px;\">\n</div>\n",
         "mode": "html"
       },
       "pluginVersion": "12.2.1",

@@ -47,7 +47,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;\">\n    <img src=\"https://mirgor.com/wp-content/uploads/2022/09/Blanco-Azul.svg\" alt=\"DMirgor\" style=\"width: 100%; height: 100%; object-fit: cover; margin-bottom: 10px;\">\n</div>\n",
+        "content": "<div style=\"width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;\">\n    <img src=\"https://aguirrenic.github.io/\" alt=\"aguirrenic\" style=\"width: 100%; height: 100%; object-fit: cover; margin-bottom: 10px;\">\n</div>\n",
         "mode": "html"
       },
       "pluginVersion": "12.2.1",
@@ -2617,9 +2617,9 @@
             "uid": "de2jnxc4zjk74f"
           },
           "format": 1,
-          "rawSQL": "SELECT \r\n    cod_lprod_19m,\r\n    cod_uorg_pp10,\r\n    cod_planta_pp18,\r\n    oee,\r\n    disponibilidad,\r\n    productividad,\r\n    calidad,\r\n    SUM(producidos) AS producidos,\r\n    SUM(rechazados) AS rechazados,\r\n    MAX(pnp) AS pnp,\r\n    MAX(sum_takt_time) AS sum_takt_time,\r\n    origen,\r\n    hora,\r\n    rn_orden,\r\n    ROW_NUMBER() OVER (\r\n        PARTITION BY cod_lprod_19m\r\n        ORDER BY hora\r\n    ) AS fila,\r\n    COALESCE(sku, 'SKU no informado') AS sku,\r\n    MAX(refreshed) as fecha_act,\r\n    MAX(refreshed) as hora_act\r\nFROM \"oee_dashboard\".\"oee_v_indicadores_calc_unif_multi\"\r\nWHERE origen = 'TDF'\r\n  AND cod_planta_pp18 = 'TDF3'\r\n  AND cod_uorg_pp10 = 'TM-SMG'\r\n  AND cod_lprod_19m IN ('TM01','TM02','TM03','TM04','TM05','TM06','TM07','TM08','TM09','TM10')\r\nGROUP BY \r\n    cod_lprod_19m,\r\n    cod_uorg_pp10,\r\n    cod_planta_pp18,\r\n    oee,\r\n    disponibilidad,\r\n    productividad,\r\n    calidad,\r\n    origen,\r\n    hora,\r\n    rn_orden,\r\n    sku;\r\n",
+          "rawSQL": "SELECT \r\n    cod_lprod_19m,\r\n    cod_uorg_pp10,\r\n    cod_planta_pp18,\r\n    oee,\r\n    disponibilidad,\r\n    productividad,\r\n    calidad,\r\n    SUM(producidos) AS producidos,\r\n    SUM(rechazados) AS rechazados,\r\n    MAX(pnp) AS pnp,\r\n    MAX(sum_takt_time) AS sum_takt_time,\r\n    origen,\r\n    hora,\r\n    rn_orden,\r\n    ROW_NUMBER() OVER (\r\n        PARTITION BY cod_lprod_19m\r\n        ORDER BY hora\r\n    ) AS fila,\r\n    COALESCE(sku, 'SKU no informado') AS sku,\r\n    MAX(refreshed) as fecha_act,\r\n    MAX(refreshed) as hora_act\r\nFROM \"oee_dash\".\"oee_v_ind_calc\"\r\nWHERE origen = 'TDF'\r\n  AND cod_planta_pp18 = 'TDF3'\r\n  AND cod_uorg_pp10 = 'TM-SMG'\r\n  AND cod_lprod_19m IN ('TM01','TM02','TM03','TM04','TM05','TM06','TM07','TM08','TM09','TM10')\r\nGROUP BY \r\n    cod_lprod_19m,\r\n    cod_uorg_pp10,\r\n    cod_planta_pp18,\r\n    oee,\r\n    disponibilidad,\r\n    productividad,\r\n    calidad,\r\n    origen,\r\n    hora,\r\n    rn_orden,\r\n    sku;\r\n",
           "refId": "A",
-          "table": "oee_v_indicadores_calc_unif_multi"
+          "table": "oee_v_ind_calc"
         }
       ],
       "title": "",
