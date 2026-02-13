@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlTag">
 <head>
   <meta charset="UTF-8">
   <title>Nicolás Aguirre | Data & AI Architect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,197 +12,120 @@
 
 <header>
   <h1>Nicolás Aguirre</h1>
-  <p>Data & AI Architect | SAP BW/4HANA | Industrial Analytics | Computer Vision</p>
+  <p 
+    data-en="Data & AI Architect | SAP BW/4HANA | Industrial Analytics | Computer Vision"
+    data-es="Arquitecto de Datos & IA | SAP BW/4HANA | Analítica Industrial | Visión por Computadora">
+    Data & AI Architect | SAP BW/4HANA | Industrial Analytics | Computer Vision
+  </p>
+
+  <div class="language-switch">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('es')">ES</button>
+  </div>
 </header>
 
 <!-- ABOUT -->
 <section>
-  <h2>About Me</h2>
+  <h2 data-en="About Me" data-es="Sobre Mí">About Me</h2>
   <div class="card">
-    <p>
-      I design and architect industrial data platforms and real-time AI systems,
-      specialized in scalable data architectures, OEE analytics, SAP BW/4HANA,
-      and computer vision solutions for manufacturing environments.
+    <p 
+      data-en="I design and architect industrial data platforms and real-time AI systems, specialized in scalable data architectures, OEE analytics, SAP BW/4HANA, and computer vision solutions for manufacturing environments."
+      data-es="Diseño y arquitecto plataformas de datos industriales y sistemas de IA en tiempo real, especializado en arquitecturas escalables, analítica OEE, SAP BW/4HANA y soluciones de visión por computadora para entornos industriales.">
+      I design and architect industrial data platforms and real-time AI systems...
     </p>
 
-    <p>
-      With over 10 years of experience in data and analytics across multiple industries,
-      I focus on building robust architectures that connect shop-floor operations
-      with enterprise-level analytics and AI-driven insights.
+    <p 
+      data-en="With over 10 years of experience in data and analytics across multiple industries, I focus on building robust architectures that connect shop-floor operations with enterprise-level analytics and AI-driven insights."
+      data-es="Con más de 10 años de experiencia en datos y analítica en múltiples industrias, me enfoco en construir arquitecturas robustas que conecten operaciones de planta con analítica empresarial e insights impulsados por IA.">
+      With over 10 years of experience in data and analytics...
     </p>
   </div>
 </section>
 
 <!-- COMPUTER VISION -->
 <section>
-  <h2>Computer Vision</h2>
+  <h2 data-en="Computer Vision" data-es="Visión por Computadora">Computer Vision</h2>
 
   <div class="card">
-    <h3>Real-Time Vision Platform</h3>
+    <h3 
+      data-en="Real-Time Vision Platform"
+      data-es="Plataforma de Visión en Tiempo Real">
+      Real-Time Vision Platform
+    </h3>
 
-    <p>
-      Multi-camera real-time streaming system built with Flask, WebRTC, and YOLO,
-      designed for scalable industrial monitoring and AI-based event detection.
+    <p 
+      data-en="Multi-camera real-time streaming system built with Flask, WebRTC, and YOLO, designed for scalable industrial monitoring and AI-based event detection."
+      data-es="Sistema de streaming multi-cámara en tiempo real construido con Flask, WebRTC y YOLO, diseñado para monitoreo industrial escalable y detección de eventos basada en IA.">
+      Multi-camera real-time streaming system...
     </p>
 
-    <p>
-      The platform processes live video streams, detects safety and operational
-      events in real time, and exposes APIs for integration with third-party systems.
-    </p>
-
-    <h4>Live System Preview</h4>
-    <iframe 
-      width="100%" 
-      height="400" 
+    <iframe width="100%" height="400"
       src="https://www.youtube.com/embed/D6nZf-7knyQ?rel=0"
-      title="Real-Time Vision Platform"
-      frameborder="0"
-      allowfullscreen>
+      frameborder="0" allowfullscreen>
     </iframe>
   </div>
 </section>
 
 <!-- INDUSTRIAL ANALYTICS -->
 <section>
-  <h2>Industrial Analytics</h2>
+  <h2 
+    data-en="Industrial Analytics"
+    data-es="Analítica Industrial">
+    Industrial Analytics
+  </h2>
 
-  <!-- OEE -->
   <div class="card">
-    <h3>Industrial OEE Monitoring System (Real-Time)</h3>
+    <h3 
+      data-en="Industrial OEE Monitoring System (Real-Time)"
+      data-es="Sistema de Monitoreo OEE Industrial (Tiempo Real)">
+      Industrial OEE Monitoring System (Real-Time)
+    </h3>
 
-    <p>
-      Real-time industrial monitoring platform built using SQL, Amazon Redshift,
-      and Grafana, designed to calculate and visualize Overall Equipment Effectiveness (OEE).
+    <p 
+      data-en="Real-time industrial monitoring platform built using SQL, Amazon Redshift, and Grafana, designed to calculate and visualize Overall Equipment Effectiveness (OEE)."
+      data-es="Plataforma de monitoreo industrial en tiempo real construida con SQL, Amazon Redshift y Grafana, diseñada para calcular y visualizar la Eficiencia Global de Equipos (OEE).">
+      Real-time industrial monitoring platform...
     </p>
 
-    <ul>
-      <li><strong>Efficiency Identification</strong></li>
-      <li><strong>Continuous Improvement</strong></li>
-      <li><strong>Waste Reduction</strong></li>
-      <li><strong>Data-Driven Decisions</strong></li>
-    </ul>
-
-    <iframe 
-      width="100%" 
-      height="400" 
-      src="https://www.youtube.com/embed/D6nZf-7knyQ?rel=0"
-      title="OEE Dashboard"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-
-    <a class="btn" href="files/plant-monitor-oee-mobile.json" target="_blank">
-      View Grafana JSON
+    <a class="btn" href="files/plant-monitor-oee-mobile.json" target="_blank"
+       data-en="View Grafana JSON"
+       data-es="Ver JSON de Grafana">
+       View Grafana JSON
     </a>
   </div>
 
-  <!-- PRODUCTION MONITORING -->
   <div class="card">
-    <h3>Assembly Line Production Monitoring Dashboard</h3>
+    <h3 
+      data-en="Industrial Data Architecture"
+      data-es="Arquitectura de Datos Industrial">
+      Industrial Data Architecture
+    </h3>
 
-    <p>
-      Real-time dashboard providing visibility into active assembly line orders,
-      including manufacturer, model, status, and planned vs produced quantities.
-    </p>
-
-    <iframe 
-      width="100%" 
-      height="400" 
-      src="https://www.youtube.com/embed/yPQCoDDLgqc?rel=0"
-      title="Production Monitoring Dashboard"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-
-    <a class="btn" href="files/manufacturing-operations-order-tracking-dashboard.json" target="_blank">
-      View Grafana JSON
-    </a>
-  </div>
-
-  <!-- POWER BI -->
-  <div class="card">
-    <h3>Production Line Control & Data Reconciliation Dashboard</h3>
-
-    <p>
-      Dashboard designed to ensure data consistency between operational plant systems
-      and Amazon Redshift data warehouse.
-    </p>
-
-    <ul>
-      <li><strong>Real-time reconciliation</strong></li>
-      <li><strong>ETL validation</strong></li>
-      <li><strong>Data governance</strong></li>
-      <li><strong>Executive reporting reliability</strong></li>
-    </ul>
-
-    <img src="assets/img/Production Line Control in Plant.png"
-         alt="Production Line Control in Plant">
-
-    <a class="btn" href="files/Production Line Control in Plant.pbix" download>
-      Download Power BI File
-    </a>
-  </div>
-
-  <!-- INDUSTRIAL ARCHITECTURE -->
-  <div class="card">
-    <h3>Industrial Data Architecture</h3>
-
-    <p>
-      Scalable industrial data architecture designed to ingest real-time production events,
-      process KPIs in Amazon Redshift, and expose analytics to visualization platforms
-      such as Grafana and Power BI.
-    </p>
-
-    <p>
-      The architecture ensures synchronization between operational plant systems
-      and enterprise data warehouses, enabling real-time OEE calculation
-      and advanced analytics.
+    <p 
+      data-en="Scalable industrial data architecture designed to ingest real-time production events, process KPIs in Amazon Redshift, and expose analytics to visualization platforms such as Grafana and Power BI."
+      data-es="Arquitectura de datos industrial escalable diseñada para ingerir eventos de producción en tiempo real, procesar KPIs en Amazon Redshift y exponer analítica a plataformas de visualización como Grafana y Power BI.">
+      Scalable industrial data architecture...
     </p>
 
     <img src="assets/img/Industrial Data Architecture.svg"
          alt="Industrial Data Architecture Diagram">
   </div>
-
 </section>
 
 <!-- CERTIFICATIONS -->
 <section>
-  <h2>Certifications & Education</h2>
+  <h2 
+    data-en="Certifications & Education"
+    data-es="Certificaciones y Educación">
+    Certifications & Education
+  </h2>
 
   <div class="card">
     <ul>
-      <li>
-        <strong>SAP Certified Associate - Data Engineer - SAP BW/4HANA</strong> – 
-        <a href="https://www.credly.com/badges/39c9e074-c5bf-4489-b5a7-47383a1645b9" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>Machine Learning</strong> – 
-        <a href="https://www.coursera.org/account/accomplishments/certificate/EE2V2KS6SZSD" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>AWS Machine Learning Foundations</strong> – 
-        <a href="https://www.udacity.com/certificate/HD6N3HNH" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>Intro to Machine Learning</strong> – 
-        <a href="https://www.kaggle.com/learn/certification/aguirrenic/intro-to-machine-learning" target="_blank">View Certificate</a>
-      </li>      
-      <li>
-        <strong>Introducción a Python</strong> – 
-        <a href="files/cert/cert-python.pdf" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>Python</strong> – 
-        <a href="https://www.kaggle.com/learn/certification/aguirrenic/python" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>Frontend JavaScript Certification</strong> – 
-        <a href="files/cert/cert-FrontEnd JS.pdf" target="_blank">View Certificate</a>
-      </li>
-      <li>
-        <strong>Project Mentoring Program – Universidad de Palermo</strong> – 
-        <a href="https://your-link-here.com" target="_blank">View Certificate</a>
-      </li>
+      <li>SAP Certified Associate - Data Engineer - SAP BW/4HANA</li>
+      <li>Machine Learning</li>
+      <li>AWS Machine Learning Foundations</li>
+      <li>Python & Frontend JavaScript Certification</li>
     </ul>
   </div>
 </section>
@@ -211,6 +133,8 @@
 <footer>
   © 2026 Nicolás Aguirre
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
