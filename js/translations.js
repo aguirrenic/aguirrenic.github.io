@@ -39,6 +39,10 @@ const translations = {
     oee_l4: "Production monitoring",
     oee_results: "Enabled data-driven manufacturing decisions.",
 
+    pm_title: "Predictive Maintenance (ML)",
+    pm_p: "Machine learning models designed to predict equipment failures using historical production data, anomaly detection, and pattern recognition techniques.",
+    pm_btn: "View ML Architecture",
+
     pbi_title: "Power BI Industrial Dashboard",
     pbi_p: "Executive-level industrial analytics dashboard designed to visualize production KPIs, downtime analysis, and OEE trends.",
     pbi_l1: "Real-Time KPI Monitoring",
@@ -92,6 +96,10 @@ const translations = {
     oee_l3: "Dashboards en tiempo real",
     oee_l4: "Monitoreo productivo",
     oee_results: "Decisiones basadas en datos en manufactura.",
+
+    pm_title: "Mantenimiento Predictivo (ML)",
+    pm_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
+    pm_btn: "Ver Arquitectura ML",
 
     pbi_title: "Dashboard Industrial en Power BI",
     pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
