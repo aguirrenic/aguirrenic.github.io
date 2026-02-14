@@ -93,7 +93,7 @@ h2 {
 .card img {
   display: block;
   margin: 25px auto 30px auto; /* centrada */
-  max-width: 900px;           /* límite real */
+  max-width: auto;           /* límite real */
   width: auto;                /* responsive */
   height: auto;
   border-radius: 10px;

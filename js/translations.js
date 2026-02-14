@@ -39,6 +39,15 @@ const translations = {
     oee_l4: "Production monitoring",
     oee_results: "Enabled data-driven manufacturing decisions.",
 
+    pbi_title: "Power BI Industrial Dashboard",
+    pbi_p: "Executive-level industrial analytics dashboard designed to visualize production KPIs, downtime analysis, and OEE trends.",
+    pbi_l1: "Real-Time KPI Monitoring",
+    pbi_l2: "Downtime Root Cause Analysis",
+    pbi_l3: "OEE Trend Visualization",
+    pbi_l4: "Executive Reporting",
+    pbi_btn: "View Power BI Dashboard",
+
+
     contact_title: "Let’s Build Scalable Data Systems",
     contact_desc: "Open to Enterprise Architecture and Industrial AI roles.",
     contact_btn: "Contact Me"
@@ -83,6 +92,14 @@ const translations = {
     oee_l3: "Dashboards en tiempo real",
     oee_l4: "Monitoreo productivo",
     oee_results: "Decisiones basadas en datos en manufactura.",
+
+    pbi_title: "Dashboard Industrial en Power BI",
+    pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
+    pbi_l1: "Monitoreo de KPIs en Tiempo Real",
+    pbi_l2: "Análisis de Causa Raíz de Paradas",
+    pbi_l3: "Visualización de Tendencias OEE",
+    pbi_l4: "Reporting Ejecutivo",
+    pbi_btn: "Ver Dashboard Power BI",
 
     contact_title: "Construyamos Sistemas Escalables",
     contact_desc: "Disponible para roles de Arquitectura e IA Industrial.",
