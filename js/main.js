@@ -1,19 +1,19 @@
+let currentLang = "en";
+
 function setLanguage(lang) {
-
-document.getElementById("htmlTag").lang = lang;
-
-const elements = document.querySelectorAll("[data-i18n]");
-
-elements.forEach(el => {
-const key = el.getAttribute("data-i18n");
-if (translations[lang][key]) {
-el.textContent = translations[lang][key];
+    currentLang = lang;
+    applyTranslations();
 }
+
+function applyTranslations() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[currentLang][key]) {
+            el.innerText = translations[currentLang][key];
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    applyTranslations();
 });
-
-localStorage.setItem("language", lang);
-}
-
-// Load saved language or default to English
-const savedLang = localStorage.getItem("language") || "en";
-setLanguage(savedLang);
