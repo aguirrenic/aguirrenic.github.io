@@ -10,7 +10,7 @@ const translations = {
 
     impact_title: "Impact & Expertise",
     impact_1_title: "Enterprise Data Architecture",
-    impact_1_desc: "Scalable cloud data platforms integrating SQL, AWS Grafana.",
+    impact_1_desc: "Scalable cloud data platforms integrating SQL, AWS and Grafana.",
     impact_2_title: "Industrial Intelligence Systems",
     impact_2_desc: "OEE and operational analytics frameworks.",
     impact_3_title: "Strategic Data Leadership",
@@ -55,7 +55,7 @@ const translations = {
 
     impact_title: "Impacto & Experiencia",
     impact_1_title: "Arquitectura de Datos Empresarial",
-    impact_1_desc: "Plataformas de datos escalables integrando SAP y AWS.",
+    impact_1_desc: "Plataformas de datos escalables integrando  y AWS.",
     impact_2_title: "Sistemas de Inteligencia Industrial",
     impact_2_desc: "Modelos OEE y analítica operativa.",
     impact_3_title: "Liderazgo Estratégico en Datos",
@@ -63,8 +63,8 @@ const translations = {
 
     cases_title: "Casos de Estudio",
 
-    aws_title: "Arquitectura de Datos Empresarial – SQL + SAP + GRAFANA",
-    aws_desc: "Plataforma de datos empresarial integrando SAP BW y AWS.",
+    aws_title: "Arquitectura de Datos Empresarial – SQL + AWS + GRAFANA",
+    aws_desc: "Plataforma de datos empresarial integrando SQL, AWS y GRAFANA.",
     architecture_label: "Arquitectura",
     design_label: "Decisiones de Diseño",
     results_label: "Resultados",
