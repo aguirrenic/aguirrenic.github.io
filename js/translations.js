@@ -48,7 +48,7 @@ const translations = {
     hero_title: "Arquitecto de Datos Empresariales & IA Industrial",
     hero_sub: "Diseñando plataformas de datos escalables y sistemas de inteligencia industrial.",
     metric_1: "15+ Años de Experiencia",
-    metric_2: "Arquitectura AWS + SAP",
+    metric_2: "Arquitectura SQL + AWS + GRAFANA",
     metric_3: "Sistemas OEE Industriales",
     metric_4: "Estrategia Cloud & Datos",
     hero_btn: "Ver Casos",
@@ -63,7 +63,7 @@ const translations = {
 
     cases_title: "Casos de Estudio",
 
-    aws_title: "Arquitectura de Datos Empresarial – AWS + SAP",
+    aws_title: "Arquitectura de Datos Empresarial – SQL + SAP + GRAFANA",
     aws_desc: "Plataforma de datos empresarial integrando SAP BW y AWS.",
     architecture_label: "Arquitectura",
     design_label: "Decisiones de Diseño",
