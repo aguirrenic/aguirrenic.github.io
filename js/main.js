@@ -18,3 +18,20 @@ window.onload = () => {
   if (savedLang) currentLang = savedLang;
   updateLanguage();
 };
+
+
+// Animación cards al aparecer
+const cards = document.querySelectorAll('.card');
+
+function checkCards() {
+  const triggerBottom = window.innerHeight - 100;
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom) {
+      card.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkCards);
+window.addEventListener('load', checkCards);
