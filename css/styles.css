@@ -220,25 +220,31 @@ section h2 {
 .summary-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
 .summary-links a {
-  color: white;             /* iconos blancos */
-  background: #4A90E2;      /* fondo azul (puede ser transparente también) */
-  padding: 15px;            /* hace un círculo */
-  border-radius: 50%;       /* redondeado */
-  font-size: 2rem;          /* tamaño del icono */
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 60px;         /* tamaño del círculo */
+  height: 60px;        /* tamaño del círculo */
+  border-radius: 50%;  /* círculo */
+  background: #4A90E2; /* fondo azul */
+  color: white;        /* ícono blanco */
+  font-size: 28px;     /* tamaño del ícono */
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .summary-links a:hover {
-  background: #9013FE;      /* cambio de color al pasar el mouse */
-  transform: scale(1.2);    /* leve zoom */
+  background: #9013FE; /* violeta al pasar mouse */
+  transform: scale(1.2);
+}
+
+.summary-links i {
+  pointer-events: none; /* asegura que el ícono se centre dentro del <a> */
 }
 
 /* ================= Contact ================= */
