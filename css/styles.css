@@ -63,14 +63,14 @@ h2 {
   margin-bottom: 30px;
   font-size: 24px;
 }
-/*
+
 .card h4 {
   margin-top: 35px;
   margin-bottom: 15px;
   font-size: 18px;
   color: #e2e8f0;
 }
-*/
+
 .card p {
   margin-bottom: 20px;
   max-width: 850px; /* 👈 CLAVE: limita ancho del texto */
@@ -94,7 +94,7 @@ h2 {
   display: block;
   margin: 25px auto 30px auto; /* centrada */
   max-width: 900px;           /* límite real */
-  width: 500px;                /* responsive */
+  width: auto;                /* responsive */
   height: auto;
   border-radius: 10px;
 }
