@@ -58,6 +58,47 @@ h2 {
   box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.card h4 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #e2e8f0;
+}
+
+.card p {
+  margin-bottom: 20px;
+  max-width: 850px; /* 👈 CLAVE: limita ancho del texto */
+  color: #cbd5e1;
+}
+
+.card ul {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 22px;
+  max-width: 850px; /* también limita lista */
+}
+
+.card li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.card img {
+  display: block;
+  margin: 25px auto 30px auto; /* centrada */
+  max-width: 900px;           /* límite real */
+  width: 500px;                /* responsive */
+  height: auto;
+  border-radius: 10px;
+}
+
 .card-img {
   width: 100%;
   max-width: 900px;
