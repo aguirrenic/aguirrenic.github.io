@@ -8,23 +8,27 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f172a, #111827);
   color: #f1f5f9;
-  line-height: 1.7; /* más aire en lectura */
+  line-height: 1.7;
 }
 
-header {
-  padding: 90px 20px;
+.hero {
   text-align: center;
+  padding: 120px 20px;
 }
 
-header h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
+.hero-sub {
   color: #94a3b8;
+  margin-top: 10px;
+}
+
+.hero-metrics {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: 600;
+  color: #38bdf8;
 }
 
 section {
@@ -40,14 +44,12 @@ h2 {
   padding-left: 15px;
 }
 
-/* ---------- CARD ---------- */
-
 .card {
   background: #1e293b;
-  padding: 40px; /* más aire interno */
+  padding: 40px;
   border-radius: 14px;
   margin-bottom: 50px;
-  border: 1px solid rgba(255,255,255,0.05); /* efecto más pro */
+  border: 1px solid rgba(255,255,255,0.05);
   transition: 0.3s ease;
 }
 
@@ -56,86 +58,56 @@ h2 {
   box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-.card h3 {
-  color: #38bdf8;
-  margin-bottom: 30px;
-  font-size: 24px;
+.card-img {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 25px;
+  border-radius: 12px;
 }
 
-.card h4 {
-  margin-top: 35px;
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: #e2e8f0;
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 25px;
 }
 
-.card p {
-  margin-bottom: 20px;
-  max-width: 850px; /* 👈 CLAVE: limita ancho del texto */
-  color: #cbd5e1;
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
-
-.card ul {
-  margin-top: 20px;
-  margin-bottom: 25px;
-  padding-left: 22px;
-  max-width: 850px; /* también limita lista */
-}
-
-.card li {
-  margin-bottom: 14px;
-  line-height: 1.7;
-  color: #cbd5e1;
-}
-
-.card img {
-  display: block;
-  margin: 25px auto 30px auto; /* centrada */
-  max-width: 900px;           /* límite real */
-  width: 500px;                /* responsive */
-  height: auto;
-  border-radius: 10px;
-}
-
-/* ---------- TECH STACK TEXT ---------- */
-
-.footer-text {
-  margin-top: 30px;
-  font-weight: 600;
-  color: #38bdf8;
-}
-
-/* ---------- BUTTON ---------- */
 
 .btn {
-  display: inline-block;    /* antes estaba inline-block */
-  margin-top: 15px;    /* espacio respecto a la imagen */
-  width: fit-content;  /* para que no ocupe todo el ancho */
-  margin-bottom: 40px; 
+  display: inline-block;
+  margin-top: 20px;
   padding: 10px 18px;
   background: #38bdf8;
   color: #0f172a;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
 }
-
 
 .btn:hover {
   background: #0ea5e9;
 }
 
-iframe {
-  border-radius: 10px;
+.language-switch {
   margin-top: 25px;
 }
 
-/* ---------- FOOTER ---------- */
+.language-switch button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  background: #334155;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-footer {
+.center {
   text-align: center;
-  padding: 60px 20px;
-  color: #64748b;
-  font-size: 14px;
 }

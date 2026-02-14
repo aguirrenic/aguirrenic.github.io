@@ -1,26 +1,20 @@
 let currentLang = "en";
 
 function setLanguage(lang) {
-    currentLang = lang;
-    applyTranslations();
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+  updateLanguage();
 }
 
-function applyTranslations() {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-
-        if (
-            typeof translations !== "undefined" &&
-            translations[currentLang] &&
-            key in translations[currentLang]
-        ) {
-            el.textContent = translations[currentLang][key];
-        } else {
-            console.warn("Missing translation key:", key);
-        }
-    });
+function updateLanguage() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.innerText = translations[currentLang][key];
+  });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    applyTranslations();
-});
+window.onload = () => {
+  const savedLang = localStorage.getItem("lang");
+  if (savedLang) currentLang = savedLang;
+  updateLanguage();
+};
