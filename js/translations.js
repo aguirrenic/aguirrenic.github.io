@@ -3,14 +3,14 @@ const translations = {
     hero_title: "Enterprise Data & Industrial AI Architect",
     hero_sub: "Designing scalable enterprise data platforms and industrial intelligence systems.",
     metric_1: "15+ Years Experience",
-    metric_2: "AWS + SAP Architecture",
+    metric_2: "SQL + AWS + GRAFANA Architecture",
     metric_3: "Industrial OEE Systems",
     metric_4: "Cloud & Data Strategy",
     hero_btn: "View Case Studies",
 
     impact_title: "Impact & Expertise",
     impact_1_title: "Enterprise Data Architecture",
-    impact_1_desc: "Scalable cloud data platforms integrating SAP and AWS.",
+    impact_1_desc: "Scalable cloud data platforms integrating SQL, AWS Grafana.",
     impact_2_title: "Industrial Intelligence Systems",
     impact_2_desc: "OEE and operational analytics frameworks.",
     impact_3_title: "Strategic Data Leadership",
@@ -18,8 +18,8 @@ const translations = {
 
     cases_title: "Case Studies",
 
-    aws_title: "Enterprise Data Architecture – AWS + SAP",
-    aws_desc: "Scalable enterprise data platform integrating SAP BW and AWS services.",
+    aws_title: "Enterprise Data Architecture – SQL + AWS + GRAFANA",
+    aws_desc: "Scalable enterprise data platform integrating SQL, AWS services and Grafana.",
     architecture_label: "Architecture Overview",
     design_label: "Key Design Decisions",
     results_label: "Results",
