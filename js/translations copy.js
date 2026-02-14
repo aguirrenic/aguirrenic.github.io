@@ -68,9 +68,17 @@ const translations = {
     arch_p1: "Arquitectura de datos industrial escalable diseñada para ingerir eventos de producción en tiempo real, procesar KPIs en Amazon Redshift y exponer analítica a plataformas de visualización como Grafana y Power BI.",
     arch_p2: "La arquitectura garantiza la sincronización entre los sistemas operativos de planta y los data warehouses empresariales, permitiendo el cálculo de OEE en tiempo real y analítica avanzada.",
 
-    pm_title: "Mantenimiento Predictivo (ML)",
-    pm_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
-    pm_btn: "Ver Arquitectura ML",
+    pm_title: "Assembly Line Production Monitoring Dashboard", 
+    pm_p: "Real-time dashboard providing visibility into active assembly line orders, including manufacturer, model, status, and planned vs produced quantities.", 
+    pm_btn: "View Grafana JSON",
+
+    ml_title: "Dashboard de Monitoreo de Producción en Línea de Ensamblaje", 
+    ml_p: "Dashboard en tiempo real que brinda visibilidad sobre órdenes activas de ensamblaje, incluyendo fabricante, modelo, estado y cantidades planificadas vs producidas.", 
+    ml_btn: "Ver JSON de Grafana",
+
+    ml_title: "Mantenimiento Predictivo (ML)",
+    ml_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
+    ml_btn: "Ver Arquitectura ML",
 
     pbi_title: "Dashboard Industrial en Power BI",
     pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
