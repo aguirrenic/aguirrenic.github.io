@@ -15,7 +15,7 @@ const translations = {
     ia_title: "Industrial Analytics",
 
     oee_title: "Industrial OEE Monitoring System (Real-Time)",
-    oee_paragraph: "Real-time industrial monitoring platform built using SQL, Amazon Redshift, and Grafana, designed to calculate and visualize Overall Equipment Effectiveness (OEE).",
+    oee_p: "Real-time industrial monitoring platform built using SQL, Amazon Redshift, and Grafana, designed to calculate and visualize Overall Equipment Effectiveness (OEE).",
     oee_l1: "Efficiency Identification",
     oee_l2: "Continuous Improvement",
     oee_l3: "Waste Reduction",
@@ -57,7 +57,7 @@ const translations = {
     ia_title: "Analítica Industrial",
 
     oee_title: "Sistema de Monitoreo OEE Industrial (Tiempo Real)",
-    oee_paragraph: "Plataforma de monitoreo industrial en tiempo real construida con SQL, Amazon Redshift y Grafana, diseñada para calcular y visualizar la Eficiencia Global de los Equipos (OEE).",
+    oee_p: "Plataforma de monitoreo industrial en tiempo real construida con SQL, Amazon Redshift y Grafana, diseñada para calcular y visualizar la Eficiencia Global de los Equipos (OEE).",
     oee_l1: "Identificación de Eficiencia",
     oee_l2: "Mejora Continua",
     oee_l3: "Reducción de Desperdicios",
