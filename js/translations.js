@@ -39,9 +39,13 @@ const translations = {
     oee_l4: "Production monitoring",
     oee_results: "Enabled data-driven manufacturing decisions.",
 
-    pm_title: "Predictive Maintenance (ML)",
-    pm_p: "Machine learning models designed to predict equipment failures using historical production data, anomaly detection, and pattern recognition techniques.",
-    pm_btn: "View ML Architecture",
+    pm_title: "Assembly Line Production Monitoring Dashboard", 
+    pm_p: "Real-time dashboard providing visibility into active assembly line orders, including manufacturer, model, status, and planned vs produced quantities.", 
+    pm_btn: "View Grafana JSON",
+
+    ml_title: "Predictive Maintenance (ML)",
+    ml_p: "Machine learning models designed to predict equipment failures using historical production data, anomaly detection, and pattern recognition techniques.",
+    ml_btn: "View ML Architecture",
 
     pbi_title: "Power BI Industrial Dashboard",
     pbi_p: "Executive-level industrial analytics dashboard designed to visualize production KPIs, downtime analysis, and OEE trends.",
@@ -97,9 +101,13 @@ const translations = {
     oee_l4: "Monitoreo productivo",
     oee_results: "Decisiones basadas en datos en manufactura.",
 
-    pm_title: "Mantenimiento Predictivo (ML)",
-    pm_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
-    pm_btn: "Ver Arquitectura ML",
+    pm_title: "Dashboard de Monitoreo de Producción en Línea de Ensamblaje", 
+    pm_p: "Dashboard en tiempo real que brinda visibilidad sobre órdenes activas de ensamblaje, incluyendo fabricante, modelo, estado y cantidades planificadas vs producidas.", 
+    pm_btn: "Ver JSON de Grafana",
+
+    ml_title: "Mantenimiento Predictivo (ML)",
+    ml_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
+    ml_btn: "Ver Arquitectura ML",
 
     pbi_title: "Dashboard Industrial en Power BI",
     pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
