@@ -1,4 +1,4 @@
-/* ================= Hero ================= */
+/* ================= Body & Hero ================= */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -114,15 +114,45 @@ section h2 {
   color: #333;
 }
 
+.card h4 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #e2e8f0;
+}
+
 .card p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 850px;
+  color: #333;
+}
+
+.card ul {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 22px;
+  max-width: 850px;
+}
+
+.card li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.card img {
+  display: block;
+  margin: 25px auto 30px auto;
+  max-width: 900px;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* ================= Video Wrapper ================= */
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -137,16 +167,75 @@ section h2 {
   border-radius: 12px;
 }
 
-/* ================= Lists ================= */
-ul {
-  padding-left: 1.2rem;
+/* ================= Summary Section ================= */
+#summary {
+  background: #1e293b;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 5rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
+#summary.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ================= Footer / Contact ================= */
+#summary h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+#summary p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #cbd5e1;
+}
+
+.summary-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.summary-metrics .metric h3 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.summary-metrics .metric p {
+  margin: 0;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.summary-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.summary-links a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.summary-links a img:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+/* ================= Contact ================= */
 #contact .card.center {
   text-align: center;
 }
@@ -158,5 +247,3 @@ ul li {
   .hero-metrics { flex-direction: column; gap: 1rem; }
   section { padding: 4rem 1rem; }
 }
-
-/* ================= Scroll Animation ================= */

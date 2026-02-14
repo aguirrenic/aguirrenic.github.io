@@ -9,7 +9,7 @@ function setLanguage(lang) {
 function updateLanguage() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
-    if(translations[currentLang][key]) el.innerText = translations[currentLang][key];
+    el.innerText = translations[currentLang][key];
   });
 }
 
@@ -19,29 +19,19 @@ window.onload = () => {
   updateLanguage();
 };
 
-// ================= Animación al scroll =================
+
+// Animación cards al aparecer
 const cards = document.querySelectorAll('.card');
-const summary = document.querySelector('#summary');
 
-function checkElements() {
+function checkCards() {
   const triggerBottom = window.innerHeight - 100;
-
-  // Cards
   cards.forEach(card => {
     const cardTop = card.getBoundingClientRect().top;
     if(cardTop < triggerBottom) {
       card.classList.add('show');
     }
   });
-
-  // Summary
-  if(summary) {
-    const summaryTop = summary.getBoundingClientRect().top;
-    if(summaryTop < triggerBottom) {
-      summary.classList.add('show');
-    }
-  }
 }
 
-window.addEventListener('scroll', checkElements);
-window.addEventListener('load', checkElements);
+window.addEventListener('scroll', checkCards);
+window.addEventListener('load', checkCards);

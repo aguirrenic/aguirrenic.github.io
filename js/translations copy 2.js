@@ -1,6 +1,5 @@
 const translations = {
   en: {
-    /* ================= Hero ================= */
     hero_title: "Enterprise Data & Industrial AI Architect",
     hero_sub: "Designing scalable enterprise data platforms and industrial intelligence systems.",
     metric_1: "15+ Years Experience",
@@ -9,12 +8,6 @@ const translations = {
     metric_4: "Cloud & Data Strategy",
     hero_btn: "View Case Studies",
 
-    /* ================= Summary ================= */
-    summary_title: "About Me",
-    summary_desc: "Enterprise Data Architect with over 10 years of experience designing industrial data architectures and analytics solutions.",
-    summary_btn: "See Projects",
-
-    /* ================= Impact ================= */
     impact_title: "Impact & Expertise",
     impact_1_title: "Enterprise Data Architecture",
     impact_1_desc: "Scalable cloud data platforms integrating SQL, AWS and Grafana.",
@@ -23,8 +16,8 @@ const translations = {
     impact_3_title: "Strategic Data Leadership",
     impact_3_desc: "Aligning business strategy with technical architecture.",
 
-    /* ================= Case Studies ================= */
     cases_title: "Case Studies",
+
     aws_title: "Enterprise Data Architecture – SQL + AWS + GRAFANA",
     aws_desc: "Scalable enterprise data platform integrating SQL, AWS services and Grafana.",
     architecture_label: "Architecture Overview",
@@ -35,6 +28,7 @@ const translations = {
     aws_l3: "Modular ETL with AWS Glue",
     aws_l4: "Governance and security controls",
     aws_results: "Improved reporting performance and scalability.",
+
     oee_title: "Industrial OEE Intelligence Platform",
     oee_desc: "OEE monitoring and analytics system for manufacturing operations.",
     capabilities_label: "Capabilities",
@@ -44,18 +38,30 @@ const translations = {
     oee_l3: "Real-time dashboards",
     oee_l4: "Production monitoring",
     oee_results: "Enabled data-driven manufacturing decisions.",
-    pm_title: "Assembly Line Production Monitoring Dashboard",
-    pm_p: "Real-time dashboard providing visibility into active assembly line orders, including manufacturer, model, status, and planned vs produced quantities.",
+
+    pm_title: "Assembly Line Production Monitoring Dashboard", 
+    pm_p: "Real-time dashboard providing visibility into active assembly line orders, including manufacturer, model, status, and planned vs produced quantities.", 
     pm_btn: "View Grafana JSON",
 
-    /* ================= Contact ================= */
+    ml_title: "Predictive Maintenance (ML)",
+    ml_p: "Machine learning models designed to predict equipment failures using historical production data, anomaly detection, and pattern recognition techniques.",
+    ml_btn: "View ML Architecture",
+
+    pbi_title: "Power BI Industrial Dashboard",
+    pbi_p: "Executive-level industrial analytics dashboard designed to visualize production KPIs, downtime analysis, and OEE trends.",
+    pbi_l1: "Real-Time KPI Monitoring",
+    pbi_l2: "Downtime Root Cause Analysis",
+    pbi_l3: "OEE Trend Visualization",
+    pbi_l4: "Executive Reporting",
+    pbi_btn: "View Power BI Dashboard",
+
+
     contact_title: "Let’s Build Scalable Data Systems",
     contact_desc: "Open to Enterprise Architecture and Industrial AI roles.",
     contact_btn: "Contact Me"
   },
 
   es: {
-    /* ================= Hero ================= */
     hero_title: "Arquitecto de Datos Empresariales & IA Industrial",
     hero_sub: "Diseñando plataformas de datos escalables y sistemas de inteligencia industrial.",
     metric_1: "15+ Años de Experiencia",
@@ -64,22 +70,16 @@ const translations = {
     metric_4: "Estrategia Cloud & Datos",
     hero_btn: "Ver Casos",
 
-    /* ================= Summary ================= */
-    summary_title: "Sobre Mí",
-    summary_desc: "Arquitecto de Datos Empresariales con más de 10 años de experiencia diseñando arquitecturas de datos industriales y soluciones analíticas.",
-    summary_btn: "Ver Proyectos",
-
-    /* ================= Impact ================= */
     impact_title: "Impacto & Experiencia",
     impact_1_title: "Arquitectura de Datos Empresarial",
-    impact_1_desc: "Plataformas de datos escalables integrando SQL y AWS.",
+    impact_1_desc: "Plataformas de datos escalables integrando  y AWS.",
     impact_2_title: "Sistemas de Inteligencia Industrial",
     impact_2_desc: "Modelos OEE y analítica operativa.",
     impact_3_title: "Liderazgo Estratégico en Datos",
     impact_3_desc: "Alineando negocio y arquitectura técnica.",
 
-    /* ================= Case Studies ================= */
     cases_title: "Casos de Estudio",
+
     aws_title: "Arquitectura de Datos Empresarial – SQL + AWS + GRAFANA",
     aws_desc: "Plataforma de datos empresarial integrando SQL, AWS y GRAFANA.",
     architecture_label: "Arquitectura",
@@ -90,6 +90,7 @@ const translations = {
     aws_l3: "ETL modular con AWS Glue",
     aws_l4: "Gobernanza y seguridad",
     aws_results: "Mejora en performance y escalabilidad.",
+
     oee_title: "Plataforma de Inteligencia OEE",
     oee_desc: "Sistema de monitoreo OEE para operaciones industriales.",
     capabilities_label: "Capacidades",
@@ -99,11 +100,23 @@ const translations = {
     oee_l3: "Dashboards en tiempo real",
     oee_l4: "Monitoreo productivo",
     oee_results: "Decisiones basadas en datos en manufactura.",
-    pm_title: "Dashboard de Monitoreo de Producción en Línea de Ensamblaje",
-    pm_p: "Dashboard en tiempo real que brinda visibilidad sobre órdenes activas de ensamblaje, incluyendo fabricante, modelo, estado y cantidades planificadas vs producidas.",
+
+    pm_title: "Dashboard de Monitoreo de Producción en Línea de Ensamblaje", 
+    pm_p: "Dashboard en tiempo real que brinda visibilidad sobre órdenes activas de ensamblaje, incluyendo fabricante, modelo, estado y cantidades planificadas vs producidas.", 
     pm_btn: "Ver JSON de Grafana",
 
-    /* ================= Contact ================= */
+    ml_title: "Mantenimiento Predictivo (ML)",
+    ml_p: "Modelos de machine learning diseñados para predecir fallas de equipos utilizando datos históricos de producción, detección de anomalías y reconocimiento de patrones.",
+    ml_btn: "Ver Arquitectura ML",
+
+    pbi_title: "Dashboard Industrial en Power BI",
+    pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
+    pbi_l1: "Monitoreo de KPIs en Tiempo Real",
+    pbi_l2: "Análisis de Causa Raíz de Paradas",
+    pbi_l3: "Visualización de Tendencias OEE",
+    pbi_l4: "Reporting Ejecutivo",
+    pbi_btn: "Ver Dashboard Power BI",
+
     contact_title: "Construyamos Sistemas Escalables",
     contact_desc: "Disponible para roles de Arquitectura e IA Industrial.",
     contact_btn: "Contactar"
