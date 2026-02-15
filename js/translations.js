@@ -48,36 +48,37 @@ const translations = {
     pm_p: "Real-time dashboard providing visibility into active assembly line orders, including manufacturer, model, status, and planned vs produced quantities.",
     pm_btn: "View Grafana JSON",
 
-    skills: {
-      title: "Experiencia",
 
-      intro: "Arquitecto de Datos Empresariales con más de 15 años evolucionando desde ecosistemas SAP BW/BI hacia plataformas modernas de datos industriales en la nube sobre AWS. Sólida experiencia en reporting corporativo, modelado de datos, ETL a gran escala, optimización de rendimiento y analítica ejecutiva.",
+    skills: {
+      title: "Expertise",
+      intro: "Enterprise Data Architect with 15+ years evolving from SAP BW/BI ecosystems to modern cloud-native industrial data platforms on AWS. Strong background in enterprise reporting, data modeling, large-scale ETL, performance optimization, and executive analytics.",
 
       architecture: {
-        title: "Arquitectura de Datos Empresarial",
-        content: "SAP BW / BW4HANA · Modelado HANA · Arquitectura en Redshift · Diseño Lakehouse · Plataformas de Datos Industriales · Modelado OEE · Sistemas Distribuidos · Gobierno de Datos"
+        title: "Enterprise Data Architecture",
+        content: "SAP BW / BW4HANA · HANA Modeling · Redshift Architecture · Lakehouse Design · Industrial Data Platforms · OEE Modeling · Distributed Data Systems · Data Governance"
       },
 
       cloud: {
-        title: "Cloud y Plataformas de Datos",
-        content: "AWS (S3, Redshift, Athena, Glue, Lambda, IAM) · Azure · Databricks · Spark · Kafka · Airflow · Procesamiento Serverless"
+        title: "Cloud & Data Platforms",
+        content: "AWS (S3, Redshift, Athena, Glue, Lambda, IAM) · Azure · Databricks · Spark · Kafka · Airflow · Serverless Processing"
       },
 
       engineering: {
-        title: "Ingeniería y Performance",
-        content: "SQL (Avanzado) · Python · Stored Procedures · Diseño ETL / ELT · Optimización de Performance · Query Optimization · Migraciones de Datos (HANA → AWS)"
+        title: "Data Engineering & Performance",
+        content: "SQL (Advanced) · Python · Stored Procedures · ETL / ELT Design · Performance Tuning · Query Optimization · Data Migration (HANA → AWS)"
       },
 
       analytics: {
-        title: "Business Intelligence & Analítica",
-        content: "Power BI · Grafana · SAP BO · MicroStrategy · Tableau · Dashboards Ejecutivos · Reporting Financiero y Operacional"
+        title: "Business Intelligence & Analytics",
+        content: "Power BI · Grafana · SAP BO · MicroStrategy · Tableau · Executive Dashboards · Financial & Operational Reporting"
       },
 
       leadership: {
-        title: "Liderazgo y Delivery",
-        content: "Liderazgo de Proyectos · Coordinación con Clientes · Estimación y Planificación · Documentación Técnica · Soporte Productivo · Equipos Cross-funcionales"
+        title: "Leadership & Delivery",
+        content: "Project Leadership · Client Coordination · Estimation & Planning · Technical Documentation · Production Support · Cross-functional Teams"
       }
     },
+  
 
     /* ================= Contact ================= */
     contact_title: "Let’s Build Scalable Data Systems",
@@ -133,37 +134,37 @@ const translations = {
     pm_title: "Dashboard de Monitoreo de Producción en Línea de Ensamblaje",
     pm_p: "Dashboard en tiempo real que brinda visibilidad sobre órdenes activas de ensamblaje, incluyendo fabricante, modelo, estado y cantidades planificadas vs producidas.",
     pm_btn: "Ver JSON de Grafana",
-
     skills: {
-      title: "Expertise",
-      intro: "Enterprise Data Architect with 15+ years evolving from SAP BW/BI ecosystems to modern cloud-native industrial data platforms on AWS. Strong background in enterprise reporting, data modeling, large-scale ETL, performance optimization, and executive analytics.",
+      title: "Experiencia",
+
+      intro: "Arquitecto de Datos Empresariales con más de 15 años evolucionando desde ecosistemas SAP BW/BI hacia plataformas modernas de datos industriales en la nube sobre AWS. Sólida experiencia en reporting corporativo, modelado de datos, ETL a gran escala, optimización de rendimiento y analítica ejecutiva.",
 
       architecture: {
-        title: "Enterprise Data Architecture",
-        content: "SAP BW / BW4HANA · HANA Modeling · Redshift Architecture · Lakehouse Design · Industrial Data Platforms · OEE Modeling · Distributed Data Systems · Data Governance"
+        title: "Arquitectura de Datos Empresarial",
+        content: "SAP BW / BW4HANA · Modelado HANA · Arquitectura en Redshift · Diseño Lakehouse · Plataformas de Datos Industriales · Modelado OEE · Sistemas Distribuidos · Gobierno de Datos"
       },
 
       cloud: {
-        title: "Cloud & Data Platforms",
-        content: "AWS (S3, Redshift, Athena, Glue, Lambda, IAM) · Azure · Databricks · Spark · Kafka · Airflow · Serverless Processing"
+        title: "Cloud y Plataformas de Datos",
+        content: "AWS (S3, Redshift, Athena, Glue, Lambda, IAM) · Azure · Databricks · Spark · Kafka · Airflow · Procesamiento Serverless"
       },
 
       engineering: {
-        title: "Data Engineering & Performance",
-        content: "SQL (Advanced) · Python · Stored Procedures · ETL / ELT Design · Performance Tuning · Query Optimization · Data Migration (HANA → AWS)"
+        title: "Ingeniería y Performance",
+        content: "SQL (Avanzado) · Python · Stored Procedures · Diseño ETL / ELT · Optimización de Performance · Query Optimization · Migraciones de Datos (HANA → AWS)"
       },
 
       analytics: {
-        title: "Business Intelligence & Analytics",
-        content: "Power BI · Grafana · SAP BO · MicroStrategy · Tableau · Executive Dashboards · Financial & Operational Reporting"
+        title: "Business Intelligence & Analítica",
+        content: "Power BI · Grafana · SAP BO · MicroStrategy · Tableau · Dashboards Ejecutivos · Reporting Financiero y Operacional"
       },
 
       leadership: {
-        title: "Leadership & Delivery",
-        content: "Project Leadership · Client Coordination · Estimation & Planning · Technical Documentation · Production Support · Cross-functional Teams"
+        title: "Liderazgo y Delivery",
+        content: "Liderazgo de Proyectos · Coordinación con Clientes · Estimación y Planificación · Documentación Técnica · Soporte Productivo · Equipos Cross-funcionales"
       }
     },
-    /* ================= Contact ================= */
+  /* ================= Contact ================= */
     contact_title: "Construyamos Sistemas Escalables",
     contact_desc: "Disponible para roles de Arquitectura e IA Industrial.",
     contact_btn: "Contactar"

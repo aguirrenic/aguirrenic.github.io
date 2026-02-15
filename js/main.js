@@ -43,5 +43,21 @@ function checkElements() {
   }
 }
 
+
+function getNestedValue(obj, path) {
+  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+}
+
+function updateLanguage() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const value = getNestedValue(translations[currentLang], key);
+
+    if (value) {
+      el.innerText = value;
+    }
+  });
+}
+
 window.addEventListener('scroll', checkElements);
 window.addEventListener('load', checkElements);
