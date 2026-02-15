@@ -112,19 +112,23 @@ section h2 {
 .summary-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 .summary-links img {
   width: 28px;
   height: 28px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  /* esto hace que SVG negros se vuelvan blancos */
+  filter: invert(1) brightness(1.2);
+
+  opacity: 0.6;
+  transition: all 0.25s ease;
 }
 
 .summary-links img:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: translateY(-3px);
 }
 
 /* ================= Cards ================= */
