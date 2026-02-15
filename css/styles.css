@@ -318,6 +318,16 @@ section h2 {
   border-radius: 12px;
 }
 
+
+.profile-pic {
+  width: 160px;          /* tamaño base */
+  height: 160px;
+  object-fit: cover;     /* evita deformación */
+  border-radius: 50%;    /* círculo */
+  display: block;
+  margin: 0 auto 30px auto; /* centrado */
+}
+
 /* ================= Responsive ================= */
 
 @media(max-width:768px) {
