@@ -217,40 +217,58 @@ section h2 {
 /* ================= Skills ================= */
 
 #skills {
-  text-align: left;
+  padding: 140px 20px;
+}
+
+#skills h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
 }
 
 .skills-intro {
   max-width: 750px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .skills-intro p {
+  font-size: 18px;
+  line-height: 1.8;
   color: #9ca3af;
-  line-height: 1.7;
-  font-size: 16px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 60px 80px;
 }
 
 .skills-block {
-  margin-bottom: 50px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  padding-left: 25px;
 }
 
-.skills-block:last-child {
-  border-bottom: none;
+.skills-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 3px;
+  height: 24px;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
 }
 
 .skills-block h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 14px;
   font-weight: 600;
 }
 
 .skills-block p {
-  color: #9ca3af;
-  line-height: 1.7;
   font-size: 15px;
+  line-height: 1.8;
+  color: #9ca3af;
 }
 
 
