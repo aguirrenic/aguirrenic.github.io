@@ -157,6 +157,7 @@ section:not(:last-child) {
 section h2 {
   font-size: 36px;
   font-weight: 600;
+  margin-top: 0;
   margin-bottom: 60px;
   letter-spacing: -0.5px;
 }
@@ -165,7 +166,6 @@ section h2 {
 
 #summary {
   text-align: center;
-  margin-top: -20px;
 }
 
 #summary p {
