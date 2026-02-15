@@ -271,7 +271,19 @@ section h2 {
   color: #9ca3af;
 }
 
+/* ================= Case Studies Grid ================= */
 
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+#case-studies h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
 /* ================= Cards ================= */
 
 .card {
