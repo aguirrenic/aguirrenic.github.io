@@ -18,7 +18,7 @@ const translations = {
     /* ================= Summary ================= */
     summary_title: "About Me",
     summary_desc: "Enterprise Data Architect with over 10 years of experience designing industrial data architectures and analytics solutions.",
-    summary_btn: "See Projects",
+    summary_btn: "See Case Studies",
 
     /* ================= Impact ================= */
     impact_title: "Impact & Expertise",
@@ -112,7 +112,7 @@ const translations = {
     /* ================= Summary ================= */
     summary_title: "Sobre Mí",
     summary_desc: "Arquitecto de Datos Empresariales con más de 10 años de experiencia diseñando arquitecturas de datos industriales y soluciones analíticas.",
-    summary_btn: "Ver Proyectos",
+    summary_btn: "Ver Casos de Estudio",
 
     /* ================= Impact ================= */
     impact_title: "Impacto & Experiencia",
