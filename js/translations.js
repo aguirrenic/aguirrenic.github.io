@@ -84,7 +84,15 @@ const translations = {
         content: "Project Leadership · Client Coordination · Estimation & Planning · Technical Documentation · Production Support · Cross-functional Teams"
       }
     },
-  
+
+    /* ================= Power BI ================= */    
+    pbi_title: "Power BI Industrial Dashboard",
+    pbi_p: "Executive-level industrial analytics dashboard designed to visualize production KPIs, downtime analysis, and OEE trends.",
+    pbi_l1: "Real-Time KPI Monitoring",
+    pbi_l2: "Downtime Root Cause Analysis",
+    pbi_l3: "OEE Trend Visualization",
+    pbi_l4: "Executive Reporting",
+    pbi_btn: "View Power BI Dashboard",
 
     /* ================= Contact ================= */
     contact_title: "Let’s Build Scalable Data Systems",
@@ -177,6 +185,16 @@ const translations = {
         content: "Liderazgo de Proyectos · Coordinación con Clientes · Estimación y Planificación · Documentación Técnica · Soporte Productivo · Equipos Cross-funcionales"
       }
     },
+
+  /* ================= Power bi ================= */
+    pbi_title: "Dashboard Industrial en Power BI",
+    pbi_p: "Dashboard de analítica industrial a nivel ejecutivo diseñado para visualizar KPIs de producción, análisis de paradas y tendencias de OEE.",
+    pbi_l1: "Monitoreo de KPIs en Tiempo Real",
+    pbi_l2: "Análisis de Causa Raíz de Paradas",
+    pbi_l3: "Visualización de Tendencias OEE",
+    pbi_l4: "Reporting Ejecutivo",
+    pbi_btn: "Ver Dashboard Power BI",
+
   /* ================= Contact ================= */
     contact_title: "Construyamos Sistemas Escalables",
     contact_desc: "Disponible para roles de Arquitectura e IA Industrial.",
