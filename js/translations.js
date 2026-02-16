@@ -9,6 +9,12 @@ const translations = {
     metric_4: "Cloud & Data Strategy",
     hero_btn: "View Case Studies",
 
+    /* ================= Navigation Buttons ================= */
+    nav_about: "About",
+    nav_skills: "Skills",
+    nav_cases: "Case Studies",
+    nav_contact: "Contact",
+
     /* ================= Summary ================= */
     summary_title: "About Me",
     summary_desc: "Enterprise Data Architect with over 10 years of experience designing industrial data architectures and analytics solutions.",
@@ -95,6 +101,13 @@ const translations = {
     metric_3: "Sistemas OEE Industriales",
     metric_4: "Estrategia Cloud & Datos",
     hero_btn: "Ver Casos",
+
+    /* ================= Navigation Buttons ================= */
+    nav_about: "Sobre mí",
+    nav_skills: "Skills",
+    nav_cases: "Casos de Estudio",
+    nav_contact: "Contacto",
+
 
     /* ================= Summary ================= */
     summary_title: "Sobre Mí",
