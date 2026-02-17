@@ -332,8 +332,8 @@ section h2 {
 
 
 .profile-pic {
-  width: 180px;          /* tamaño base */
-  height: 180px;
+  width: 150px;          /* tamaño base */
+  height: 150px;
   object-fit: cover;     /* evita deformación */
   border-radius: 50%;    /* círculo */
   display: block;
